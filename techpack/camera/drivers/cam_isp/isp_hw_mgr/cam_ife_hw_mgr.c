@@ -4532,9 +4532,6 @@ static int cam_ife_mgr_release_hw(void *hw_mgr_priv,
 		ctx->epoch_cnt[i] = 0;
 	}
 
-	CAM_INFO(CAM_ISP, "Release HW success ctx id: %u",
-		ctx->ctx_index);
-
 	memset(&ctx->ts, 0, sizeof(struct timespec64));
 	cam_ife_hw_mgr_put_ctx(&hw_mgr->free_ctx_list, &ctx);
 	return rc;
