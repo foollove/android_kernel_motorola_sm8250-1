@@ -46,6 +46,10 @@ ifeq ($(CONFIG_ARCH_KONA), y)
 LINUXINCLUDE    += \
                 -include $(srctree)/techpack/audio/config/konaautoconf.h
 endif
+ifeq ($(CONFIG_NIO_DTB), y)
+LINUXINCLUDE    += \
+                -include $(srctree)/techpack/audio/config/konanio.h
+endif
 ifeq ($(CONFIG_ARCH_SDM660), y)
 LINUXINCLUDE    += \
                 -include $(srctree)/techpack/audio/config/sdm660autoconf.h
